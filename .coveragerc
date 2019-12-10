@@ -1,0 +1,8 @@
+[run]
+branch = True
+source = code_demo
+omit =
+    # omit __init__.py file
+    code_demo/__init__.py
+[html]
+directory = coverage_report
