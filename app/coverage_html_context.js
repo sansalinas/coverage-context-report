@@ -34,13 +34,16 @@ coverage_show_line_context = function () {
             var line = $("p#t" + arc);
             if(line.length){
                 line.addClass("show_par");
-                line_context = line.find("span.annotate.long");
-                if(line_context.length == 0){
-                    line.prepend('<span class="annotate long"></span>');
-                }
-                line_context = line.find("span.annotate.long")[0];
-                if(line_context.innerHTML.indexOf(context) == -1) {
-                    line_context.append(context + '\r\n');
+                span_r = line.find("span.r");
+                if(span_r.length){
+                    line_context = span_r.find("span.annotate.long");
+                    if(line_context.length == 0){
+                        span_r.prepend('<span class="annotate long"></span>');
+                    }
+                    line_context = span_r.find("span.annotate.long")[0];
+                    if(line_context.innerHTML.indexOf(context) == -1) {
+                        line_context.append(context + '\r\n');
+                    }
                 }
             }
         }
