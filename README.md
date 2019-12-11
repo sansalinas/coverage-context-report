@@ -5,7 +5,7 @@ This script generate required js content to be included into default coverage_ht
 ## Requirements
 ### Install coverage 5
 ```sh
-pip install coverage==5.0a7
+pip install coverage==5.0b1
 ```
 
 ### Install pytest-cov
